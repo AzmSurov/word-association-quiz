@@ -1,4 +1,6 @@
+/* eslint-disable eqeqeq */
 import './App.css';
+// eslint-disable-next-line no-unused-vars
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
@@ -37,6 +39,7 @@ const App = () => {
     if(chosenLevel) {
       getRandomWords()
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chosenLevel])
 
   const checkAnswer = (option, optionIndex, correctAnswer) => {
