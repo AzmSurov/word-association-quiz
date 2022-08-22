@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 
 const App = () => {
-
+  const apiKey = process.env.REACT_APP_RAPID_API_KEY
   const [chosenLevel, setChosenLevel] = useState(null);
   const [words, setWords] = useState(null);
   const [correctAnswers, setCorrectAnswers] = useState([]);
@@ -21,7 +21,7 @@ const App = () => {
       url: 'https://twinword-word-association-quiz.p.rapidapi.com/type1/',
       params: {level: chosenLevel, area: 'sat'},
       headers: {
-        'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
+        'X-RapidAPI-Key': apiKey,
         'X-RapidAPI-Host': 'twinword-word-association-quiz.p.rapidapi.com'
       }
     };
